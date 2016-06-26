@@ -1,6 +1,7 @@
 .PHONY deploy pull
 
-DFILES = ./dotfiles/*
+SOURCEDIR = './dotfiles/'
+DFILES = $(shell find $(SOURCEDIR) -name '*')
 
 deploy:
         for f in $(DFILES) ; \
