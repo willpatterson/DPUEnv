@@ -1,0 +1,16 @@
+.PHONY deploy pull
+
+DFILES = ./dotfiles/*
+
+deploy:
+        for f in $(DFILES)
+        do
+            cp ./dotfiles/$(f) ~/.$(f)
+        done
+
+pull:
+        for f in $(DFILES)
+        do
+            cp ~/.$(f) ./dotfiles
+        done
+
