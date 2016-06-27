@@ -1,11 +1,11 @@
 .PHONY deploy pull
 
 SOURCEDIR = './dotfiles/'
-DFILES = $(shell find $(SOURCEDIR) -name '*')
+DFILES = $(shell find $(SOURCEDIR) -name '*' -type f)
 
 deploy:
-	for f in $(DFILES); do cp ./dotfiles/$(f) ~/.$(f); done
+	for f in $(DFILES); do cp $(SOURCEDIR)/$(f) ~/.$(f); done
 
 pull:
-	for f in $(DFILES);  do cp ~/.$(f) ./dotfiles; done
+	for f in $(DFILES);  do cp ~/.$(f) $(SOURCEDIR); done
 
