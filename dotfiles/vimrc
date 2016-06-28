@@ -44,3 +44,4 @@ let python_version_2 = 1
 "Enter line without going into insert mode
 nmap <S-ENTER> O<Esc>
 nmap <C-ENTER> o<Esc>
+set fillchars+=vert:\
