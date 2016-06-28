@@ -8,3 +8,4 @@ deploy:
 
 pull:
 	for f in $(DFILES); do cp ~/.$$f $(SOURCEDIR)/$$f; done
+	git status
