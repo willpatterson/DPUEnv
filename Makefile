@@ -7,4 +7,4 @@ deploy:
 	for f in $(DFILES); do cp $(SOURCEDIR)/$$f ~/.$$f; done
 
 pull:
-	for f in $(DFILES); do cp ~/.$$f $(SOURCEDIR); done
+	for f in $(DFILES); do cp ~/.$$f $(SOURCEDIR)/$$f; done
