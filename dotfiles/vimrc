@@ -47,3 +47,11 @@ let python_version_2 = 1
 nmap <S-ENTER> O<Esc>
 nmap <C-ENTER> o<Esc>
 set fillchars+=vert:\
+
+"80 column highlight
+if exists('+colorcolumn')
+  set colorcolumn=80
+  highlight ColorColumn ctermbg=6
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
