@@ -9,6 +9,7 @@ Plugin 'ervandew/supertab'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'hdima/python-syntax'
 Plugin 'vim-scripts/boxdraw'
+Plugin 'rust-lang/rust.vim'
 
 call vundle#end()        
 filetype plugin indent on
