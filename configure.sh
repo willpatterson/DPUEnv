@@ -1,15 +1,16 @@
 #!/bin/bash
-
-# Configure script for mac##############
 #
+# Configure script for macOS ##################################################
+#
+# THIS SCRIPT IS UNTESTED: DO NOT RUN
 # Should be run after make deploy
-#################################
-
-#Install Pyenv
-git clone https://github.com/yyuu/pyenv.git ~/.pyenv
+###############################################################################
 
 #Install Oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+#Install Pyenv
+git clone https://github.com/yyuu/pyenv.git ~/.pyenv
 
 PYTHON_VERSIONS=(2.7.9 3.4.3 3.5.1)
 for v in $PYTHON_VERSIONS
@@ -19,6 +20,7 @@ do
     pip install --upgrade pip
     pip install --upgrade setuptools
     pip install virtualenv
+    pip install pylint
 done
 
 #Install HomeBrew
