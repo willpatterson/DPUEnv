@@ -1,5 +1,5 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible
+filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -14,7 +14,6 @@ Plugin 'rust-lang/rust.vim'
 call vundle#end()        
 filetype plugin indent on
 
-filetype indent plugin on
 syntax on
 set ignorecase
 set smartcase
@@ -31,15 +30,11 @@ set expandtab
 set mouse=a
 set hlsearch
 
-"c++11 compiler syntastic
-
-"let g:syntastic_cpp_compiler = 'g++'
-"let g:syntastic_cpp_compiler_options = ' -std=c++11'
-let g:syntastic_python_python_exec = '/vol/apps/system/python/pyenv/shims/python'
+"Python syntax highlighting:
+"Syntastic
+let g:syntastic_python_python_exec = '/Users/will/.pyenv/shims/python'
 let g:syntastic_python_checkers = ['pylint']
-"#set makeprg
-
-"Python syntax highlighter
+"python-syntax
 let python_highlight_all = 1
 let python_version_2 = 1
 
@@ -51,7 +46,7 @@ set fillchars+=vert:\
 "80 column highlight
 if exists('+colorcolumn')
   set colorcolumn=80
-  highlight ColorColumn ctermbg=6
+  highlight ColorColumn ctermbg=2
 else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
