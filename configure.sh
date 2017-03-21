@@ -39,6 +39,6 @@ do
 done
 
 #Setup DevBench
-mkdir -p ~/DevBench
+mkdir -p ~/Documents/DevBench
 
 #PROJECTS=(DkMonitor LASubway LogoBatch DotFiles)
