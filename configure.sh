@@ -26,17 +26,10 @@ done
 #Install HomeBrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-BREW_INSTALLS=(cask tmux vim git wget ansible stow screenfetch htop)
-for b in $BREW_INSTALLS #Only installs first entry
-do
-    brew install $b 
-done
-
-CASK_INSTALLS=(google-chrome slack virtualbox julia rust vlc atom)
-for c in $CASK_INSTALLS #Only installs first entry
-do
-    brew cask install $c
-done
+#Brew package installs:
+brew install cask tmux vim git wget ansible stow screenfetch htop
+#Cask packages installs:
+brew cask install google-chrome slack virtualbox julia rust vlc atom torbrowser
 
 #Install Vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
