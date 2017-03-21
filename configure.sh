@@ -38,6 +38,9 @@ do
     brew cask install $c
 done
 
+#Install Vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 #Setup DevBench
 mkdir -p ~/Documents/DevBench
 
