@@ -29,7 +29,7 @@ done
 #Brew package installs:
 brew install cask tmux vim git wget ansible stow screenfetch htop
 #Cask packages installs:
-brew cask install google-chrome slack virtualbox julia rust vlc atom torbrowser
+brew cask install google-chrome slack virtualbox julia rust vlc atom torbrowser flux
 
 #Install Vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
