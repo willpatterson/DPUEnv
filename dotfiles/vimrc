@@ -10,6 +10,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'hdima/python-syntax'
 Plugin 'vim-scripts/boxdraw'
 Plugin 'rust-lang/rust.vim'
+"Plugin 'jalvesaq/Nvim-R'
 
 call vundle#end()        
 filetype plugin indent on
@@ -29,11 +30,19 @@ set softtabstop=4
 set expandtab
 set mouse=a
 set hlsearch
+set cursorline
+
+nnoremap j gj
+nnoremap k gk
+inoremap jk <esc>
 
 "Python syntax highlighting:
 "Syntastic
-let g:syntastic_python_python_exec = '/Users/will/.pyenv/shims/python'
-let g:syntastic_python_checkers = ['pylint']
+function! TPySyntasic()
+    let g:syntastic_python_python_exec = '/Users/will/.pyenv/shims/python'
+    let g:syntastic_python_checkers = ['pylint']
+endfunc
+
 "python-syntax
 let python_highlight_all = 1
 let python_version_2 = 1
@@ -45,7 +54,7 @@ set fillchars+=vert:\
 
 "80 column highlight
 if exists('+colorcolumn')
-  set colorcolumn=80
+  set colorcolumn=200
   highlight ColorColumn ctermbg=2
 else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
