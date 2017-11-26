@@ -10,7 +10,6 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'hdima/python-syntax'
 Plugin 'vim-scripts/boxdraw'
 Plugin 'rust-lang/rust.vim'
-"Plugin 'jalvesaq/Nvim-R'
 
 call vundle#end()        
 filetype plugin indent on
